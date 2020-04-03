@@ -18,5 +18,6 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
+    url(r'^unlock/', views.unlock, name='unlock'),
     url(r'^$', views.home, name='home'),
 ]

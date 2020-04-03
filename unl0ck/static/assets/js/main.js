@@ -30,4 +30,39 @@ $(document).ready(function() {
     $('#displayText').hide()
     $('#loader').hide()
 
+    $('#searchBtn').click(() => {
+      let userCode = $('#userCode').val().trim()
+      if (userCode.length !== 4){
+        swal('Invalid Code Length', '', 'warning')
+        return
+      }
+
+      // validating user input
+      let re = /^(([a-fA-F0-9]))+$/;
+      
+
+      if (!re.test(String(userCode).toLowerCase())){
+        swal('Invalid Input', '', 'warning')
+        return
+      }
+
+      userCode = userCode.toUpperCase()
+
+      $('#loader').show()
+      $('#searchBtn').hide()
+      $('#searchBtn').attr('disabled', 'disabled')
+      $.get('/unlock', { 'userCode': userCode }, data => {
+        if(data && data.status){
+          $('#displayText').show()
+          $('#displayText').html(data.message)
+        }else{
+          swal('Error', data.message, 'error')
+        }
+        $('#loader').hide()
+        $('#searchBtn').show()
+        $('#searchBtn').removeAttr('disabled')
+      })
+
+    })
+
 });

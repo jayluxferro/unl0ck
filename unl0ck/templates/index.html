@@ -19,8 +19,8 @@
       <div class="main-search-box pt-3 pb-4 d-inline-block">
         <form class="form-inline search-form justify-content-center" action="#" method="post">
 
-          <input type="text" placeholder="Enter code... eg. A111" name="search" class="form-control search-input" minlength="4" maxlength="4" style="text-align: center" required autofocus><br/>
-          <button type="button" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+          <input type="text" id="userCode" placeholder="Enter code... eg. A111" name="search" class="form-control search-input" minlength="4" maxlength="4" style="text-align: center" autocapitalize="on" required autofocus><br/>
+          <button id="searchBtn" type="button" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
 
         </form>
       </div>
@@ -30,7 +30,7 @@
 
   <section class="cards-section text-center" style="background-color: #fff">
     <div class="container">
-      <h2 class="title" id="displayText">0000</h2>
+      <h1 class="title" id="displayText" style="font-size: 40px;">_ _ _ _</h1>
       <div class="intro">
         <div class="cta-container">
           <div id="loader">
