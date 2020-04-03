@@ -17,6 +17,10 @@
     <link rel="stylesheet" href="{% static "assets/plugins/elegant_font/css/style.css" %}">
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="{% static "assets/css/styles.css" %}">
+    <script>
+        if (window.location.protocol != "https:")
+            window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+      </script>
   </head>
   <body>
      {% autoescape off %}
