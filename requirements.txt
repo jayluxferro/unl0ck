@@ -1,0 +1,4 @@
+django==2.0
+gunicorn
+whitenoise==3.3.*
+dj-database-url

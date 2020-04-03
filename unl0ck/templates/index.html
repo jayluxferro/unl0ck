@@ -1,0 +1,55 @@
+{% extends "home.html" %}
+{% load staticfiles %}
+{% block content %}
+<div class="page-wrapper">
+
+  <!-- ******Header****** -->
+  <header class="header text-center">
+    <div class="container">
+      <div class="branding">
+        <h1 class="logo">
+          <span aria-hidden="true" class="icon_lock_alt icon"></span>
+          <span class="text-highlight">un</span><span class="text-bold">l0ck</span>
+        </h1>
+      </div><!--//branding-->
+      <div class="tagline">
+
+      </div><!--//tagline-->
+
+      <div class="main-search-box pt-3 pb-4 d-inline-block">
+        <form class="form-inline search-form justify-content-center" action="#" method="post">
+
+          <input type="text" placeholder="Enter code... eg. A111" name="search" class="form-control search-input" minlength="4" maxlength="4" style="text-align: center" required autofocus><br/>
+          <button type="button" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+
+        </form>
+      </div>
+
+    </div><!--//container-->
+  </header><!--//header-->
+
+  <section class="cards-section text-center" style="background-color: #fff">
+    <div class="container">
+      <h2 class="title" id="displayText">0000</h2>
+      <div class="intro">
+        <div class="cta-container">
+          <div id="loader">
+            <img src="{% static "/assets/images/loader.gif" %}" />
+          </div>
+        </div><!--//cta-container-->
+      </div><!--//intro-->
+      <div id="cards-wrapper" class="cards-wrapper row">
+      </div><!--//cards-->
+
+    </div><!--//container-->
+  </section><!--//cards-section-->
+</div><!--//page-wrapper-->
+
+<footer class="footer text-center">
+  <div class="container">
+    <small class="copyright">Developed by <a href="https://github.com/jayluxferro/" target="_blank">Jay Lux Ferro</a></small>
+
+  </div><!--//container-->
+</footer><!--//footer-->
+{% endblock %}
+

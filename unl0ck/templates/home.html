@@ -1,0 +1,33 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="unl0ck">
+    <meta name="author" content="SPERIXLABS; jayluxferro@sperixlabs.org, Jay Lux Ferro">
+    <title>unl0ck</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="{% static "assets/plugins/bootstrap/css/bootstrap.min.css" %}">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="{% static "assets/plugins/elegant_font/css/style.css" %}">
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="{% static "assets/css/styles.css" %}">
+  </head>
+  <body>
+     {% autoescape off %}
+          {% block content %}
+
+          {% endblock %}
+      {% endautoescape %}
+      <!-- Main Javascript -->
+      <script type="text/javascript" src="{% static "assets/plugins/jquery-3.3.1.min.js" %}"></script>
+      <script type="text/javascript" src="{% static "assets/plugins/bootstrap/js/bootstrap.min.js" %}"></script>
+      <script type="text/javascript" src="{% static "assets/plugins/stickyfill/dist/stickyfill.min.js" %}"></script>
+      <script type="text/javascript" src="{% static "assets/js/main.js" %}"></script>
+  </body>
+</html>
