@@ -44,6 +44,7 @@ $(document).ready(function() {
 
 
     const processData = () => {
+      $('#displayText').hide()
       let userCode = $('#userCode').val().trim()
       if (userCode.length !== 4){
         swal('Invalid Code Length', '', 'warning')
