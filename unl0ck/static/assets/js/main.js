@@ -30,7 +30,20 @@ $(document).ready(function() {
     $('#displayText').hide()
     $('#loader').hide()
 
+    
+    $('#userCode').on('keyup', e => {
+      if(e.keyCode === 13){
+        processData()
+      }
+    })
+    
+
     $('#searchBtn').click(() => {
+      processData()
+    })
+
+
+    const processData = () => {
       let userCode = $('#userCode').val().trim()
       if (userCode.length !== 4){
         swal('Invalid Code Length', '', 'warning')
@@ -62,7 +75,5 @@ $(document).ready(function() {
         $('#searchBtn').show()
         $('#searchBtn').removeAttr('disabled')
       })
-
-    })
-
+    }
 });
